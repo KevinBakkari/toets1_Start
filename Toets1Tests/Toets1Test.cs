@@ -29,5 +29,23 @@ namespace Toets1Tests
             var result = MyFunctions.GenereerGetallenreeks(getal);
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void ConvertStringToBinary_voorA()
+        {
+            string input = "A";
+            string expected = "01000001 ";
+            var result = MyFunctions.ConvertStringToBinary(input);
+            Assert.Equal(expected, result);
+        }
+
+        [Fact]
+        public void ConvertStringToBinary_voorKevin()
+        {
+            string input = "Kevin";
+            string expected = "01001011 01100101 01110110 01101001 01101110 ";
+            var result = MyFunctions.ConvertStringToBinary(input);
+            Assert.Equal(expected, result);
+        }
     }
 }

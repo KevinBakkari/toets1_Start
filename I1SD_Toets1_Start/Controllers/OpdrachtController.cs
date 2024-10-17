@@ -35,7 +35,6 @@ namespace Toets1_Start.Controllers
                 ViewBag.Error = "Voer een geldige naam in";
                 return View();
             }
-
             string binaireNaam = MyFunctions.ConvertStringToBinary(naam);
             ViewBag.BinaireNaam = binaireNaam;
             ViewBag.IngevoerdeNaam = naam;

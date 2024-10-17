@@ -8,7 +8,7 @@
     <input type="text" name="naam" value="@ViewBag.IngevoerdeNaam" required />
     <br />
 <button type="submit" style="background-color: lightgreen; color: black; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">
-    Converteer
+    Converteer naar binair
 </button>
 </form>
 
@@ -18,9 +18,23 @@
         <p style="color:red;">@ViewBag.Error</p>
 }
 <br /><br />
-@if (ViewBag.BinaireNaam != null)
 
+@if (ViewBag.BinaireNaam != null)
 {
-        <h3>Jouw naam in binaire code:</h3>
-        <pre>@ViewBag.IngevoerdeNaam @ViewBag.BinaireNaam</pre>
+    <h3 style="margin-top: 20px;">Jouw naam in binaire code:</h3>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <thead>
+            <tr>
+                <th style="text-align: left; padding: 8px; background-color: #f4f4f4; border-bottom: 1px solid #ccc;">Naam</th>
+                <th style="text-align: left; padding: 8px; background-color: #f4f4f4; border-bottom: 1px solid #ccc;">Binaire Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 8px; border-bottom: 1px solid #ccc;">@ViewBag.IngevoerdeNaam</td>
+                <td style="padding: 8px; border-bottom: 1px solid #ccc;">@ViewBag.BinaireNaam</td>
+            </tr>
+        </tbody>
+    </table>
 }
+
