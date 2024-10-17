@@ -17,10 +17,10 @@
                 return "Ongeldige invoer.";
             }
 
-            string result = "Start met " + getal + ": ";
+            string result = "";
             while (getal != 1)
             {
-                result += getal + " ";
+                result += getal + " -> ";
                 if (getal % 2 == 0)
                 {
                     getal = getal / 2;
