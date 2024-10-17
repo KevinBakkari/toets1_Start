@@ -16,7 +16,7 @@ namespace Toets1Tests
         public void TestGenereerGetallenreeks_Met13()
         {
             int getal = 13;
-            string expected = "Start met 13: 13 40 20 10 5 16 8 4 2 1";
+            string expected = "13 -> 40 -> 20 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1";
             var result = MyFunctions.GenereerGetallenreeks(getal);
             Assert.Equal(expected, result);
         }
