@@ -10,5 +10,13 @@
         {
             return "Welkom bij deze ASP-NET / C# toets";
         }
+        public static string GenereerGetallenreeks(int getal)
+        {
+            if (getal < 10 || getal > 1000)
+            {
+                return "Ongeldige invoer.";
+            }
+
+            string result = "Start met " + getal + ": ";
     }
 }

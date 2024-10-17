@@ -1,20 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using I1SD_Toets1_Start;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Toets1_Start.Controllers
 {
     public class OpdrachtController : Controller
     {
-        public IActionResult Opdracht1()
+        [HttpPost]
+        public IActionResult Opdracht1(int getal)
         {
-            // Hier komt jouw uitwerking van opdracht 1
-            ViewBag.Naam = "Jouw naam";
-            return Content("Welkom bij deze ASP-NET / C# toets");
+            ViewBag.Naam = "Kevin Bakkari";
+            string result = MyFunctions.GenereerGetallenreeks(getal);
+            ViewBag.Result = result;
+            return View();
         }
 
         public IActionResult Opdracht2()
         {
             // Hier komt jouw uitwerking van opdracht 2
-            ViewBag.Naam = "Jouw naam";
+            ViewBag.Naam = "Kevin Bakkari";
             return Content("Welkom bij deze ASP-NET / C# toets");
         }
     }
