@@ -5,10 +5,17 @@ namespace Toets1_Start.Controllers
 {
     public class OpdrachtController : Controller
     {
+        public IActionResult Opdracht1()
+        {
+            return View();
+        }
         [HttpPost]
         public IActionResult Opdracht1(int getal)
         {
             ViewBag.Naam = "Kevin Bakkari";
+            // geleerd van marcel
+            ViewBag.Getal = getal;
+            // dit boven
             string result = MyFunctions.GenereerGetallenreeks(getal);
             ViewBag.Result = result;
             return View();

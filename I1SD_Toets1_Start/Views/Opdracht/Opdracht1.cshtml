@@ -1,3 +1,22 @@
-﻿@model Toets1_Start.Models.Opdracht1
+﻿@{
+    ViewBag.Title = "Opdracht 1 Kevin";
+}
 
-<h1>@ViewBag.Naam</h1>
+<h1 style="color: blue;">Kevin Bakkari</h1>
+<h3 style="color: darkgreen;">Voer een getal in tussen 10 en 1000:</h3>
+
+<form method="post" style="background-color: aliceblue; padding: 15px; border-radius: 5px;">
+    <label for="getal" style="margin-right: 10px;">Getal:</label>
+    <input type="number" id="getal" name="getal" required min="10" max="1000"
+           value="@ViewBag.Getal" style="padding: 5px; margin-bottom: 10px;" />
+    <button type="submit" style="background-color: forestgreen; color: white; padding: 10px 15px; border-radius: 5px; cursor: pointer;">
+        Genereer Reeks
+    </button>
+</form>
+
+@if (ViewBag.Result != null)
+
+{
+    <h3 style="color: #34495e;">Getallenreeks:</h3>
+    <p style="background-color: #ecf0f1; padding: 10px; border-radius: 5px;">@ViewBag.Result</p>
+}

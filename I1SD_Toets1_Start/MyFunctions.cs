@@ -18,5 +18,21 @@
             }
 
             string result = "Start met " + getal + ": ";
+            while (getal != 1)
+            {
+                result += getal + " ";
+                if (getal % 2 == 0)
+                {
+                    getal = getal / 2;
+                }
+                else
+                {
+                    getal = getal * 3 + 1;
+                }
+            }
+
+            result += "1";
+            return result;
+        }
     }
 }
