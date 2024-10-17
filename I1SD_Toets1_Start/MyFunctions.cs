@@ -34,5 +34,15 @@
             result += "1";
             return result;
         }
+        public static string ConvertStringToBinary(string naam)
+        {
+            string result = "";
+            foreach (char letter in naam)
+            {
+                string binaireLetter = Convert.ToString(letter, 2).PadLeft(8, '0');
+                result += binaireLetter + " ";
+            }
+            return result;
+        }
     }
 }

@@ -21,11 +21,26 @@ namespace Toets1_Start.Controllers
             return View();
         }
 
+        [HttpGet]
         public IActionResult Opdracht2()
         {
-            // Hier komt jouw uitwerking van opdracht 2
-            ViewBag.Naam = "Kevin Bakkari";
-            return Content("Welkom bij deze ASP-NET / C# toets");
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Opdracht2(string naam)
+        {
+            if (string.IsNullOrEmpty(naam))
+            {
+                ViewBag.Error = "Voer een geldige naam in";
+                return View();
+            }
+
+            string binaireNaam = MyFunctions.ConvertStringToBinary(naam);
+            ViewBag.BinaireNaam = binaireNaam;
+            ViewBag.IngevoerdeNaam = naam;
+            return View();
+
         }
     }
 }

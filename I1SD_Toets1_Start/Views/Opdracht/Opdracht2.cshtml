@@ -1,3 +1,26 @@
-﻿@model Toets1_Start.Models.Opdracht2
+﻿@{
+    ViewBag.Title = "Opdracht 2 Kevin";
+}
+<h1 style="color: blue;">Kevin Bakkari</h1>
+<h2>Voer hieronder jouw volledige naam in:</h2>
 
-<h1>@ViewBag.Naam</h1>
+<form method="post">
+    <input type="text" name="naam" value="@ViewBag.IngevoerdeNaam" required />
+    <br />
+<button type="submit" style="background-color: lightgreen; color: black; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;">
+    Converteer
+</button>
+</form>
+
+@if (ViewBag.Error != null)
+
+{
+        <p style="color:red;">@ViewBag.Error</p>
+}
+<br /><br />
+@if (ViewBag.BinaireNaam != null)
+
+{
+        <h3>Jouw naam in binaire code:</h3>
+        <pre>@ViewBag.IngevoerdeNaam @ViewBag.BinaireNaam</pre>
+}
